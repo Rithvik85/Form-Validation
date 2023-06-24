@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validation webpage</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#main{
+			width: 100vw;
+			height: 100vh;
+			border: 1px solid red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url("");
+		}
+		#form1{
+			text-align: center;
+			
+			border-radius: 10px;
+			width: 23vw;
+			height: 38vh;
+			background-color: rgba(20, 100, 120, 0.3);
+
+		}
+		body{
+			background: url('2.jpg');
+		}
+		#input1{
+			margin-top: 10px;
+		}
+		#head{
+			margin-top: 20px;
+		}
+		#first input{
+			border-radius: 8px;
+			width: 20vw;
+			height: 5vh;
+			padding: 10px 10px;
+
+		}
+		#second input{
+			border-radius: 8px;
+			width: 20vw;
+			height: 5vh;
+			padding: 10px 10px;
+
+
+		}
+		#btn button{
+			width: 6vw;
+			height: 3vh;
+			border-radius: 5px;
+			font-size: 12px;
+			margin-top: 20px;
+
+		}
+		#btn button:hover{
+			color: red;
+			cursor: pointer;
+
+
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div id="main">
+	<form id="form1" onsubmit=" return logic()" action="protfolio.html">
+		<div id="head">
+		<h2>login form</h2>
+	</div>
+		<div id="input1">
+			<div id="first">
+		<input type="text" name="user" placeholder="username" id="user"   ><br><br></div>
+	<div id="second">
+		<input type="password" name="password" placeholder="password" id="pass" ><br><br></div>
+		
+		<input type="checkbox" name="checkbox">  I Agree Term and Conditions
+		
+		<div id="btn">
+		<button type="submit">submit</button>
+	</div>
+	</div>
+	</form>
+</div>
+<script type="text/javascript">
+	function logic() {
+		// body...
+		var name = document.getElementById("user").value;
+		var pass  = document.getElementById("pass").value;
+		 if(name == "" || name.length < 4){
+		 	alert("invalid username");
+		 	return false;
+		 }
+		 else if(pass == "" || pass.length > 8){
+		 	alert("invalid password");
+		 	return false;
+
+		 }
+		 else{
+		 	alert("thank you your form is submitted");
+		 	return true;
+		 }
+
+	}
+</script>
+	
+</body>
+</html>
